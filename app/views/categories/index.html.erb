@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>Liste des catégories</h1>
+    </div>
+    <div class="col-xs-12">
+      <div class="line">
+        <p>Nom</p>
+      </div>
+      <% @categories.each do |category| %>
+        <div class="line">
+          <p><%= category.name %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
