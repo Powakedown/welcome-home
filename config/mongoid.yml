@@ -153,9 +153,12 @@ development:
     # Use background indexes by default if `background` option not specified. (default: false)
     # background_indexing: false
 production:
-  sessions:
+  clients:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      database: <%= ENV['MONGOHQ_URL'] %>
+  # sessions:
+  #   default:
+  #     uri: <%= ENV['MONGOHQ_URL'] %>
 test:
   clients:
     default:
