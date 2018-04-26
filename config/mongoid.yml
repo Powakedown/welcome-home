@@ -155,10 +155,10 @@ development:
 production:
   clients:
     default:
-      database: <%= ENV['MONGOHQ_URL'] %>
-  # sessions:
-  #   default:
-  #     uri: <%= ENV['MONGOHQ_URL'] %>
+      database: welcome_home_production
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>
 test:
   clients:
     default:
