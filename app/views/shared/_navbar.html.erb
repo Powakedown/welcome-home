@@ -6,7 +6,12 @@
     <%= link_to "Blog", blog_path %>
     <%= link_to "Catégories", categories_path %>
     <%= link_to "Posts", posts_path %>
-    <%= link_to "Écrire un article", new_post_path, class:"btn btn-primary" %>
-    <%= link_to "Écrire une newsletter", newsletter_path, class:"btn btn-primary" %>
+    <% if user_signed_in? %>
+      <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete %>
+      <%= link_to "Écrire un article", new_post_path, class:"btn btn-primary" %>
+      <%= link_to "Écrire une newsletter", newsletter_path, class:"btn btn-primary" %>
+    <% else %>
+      <%= link_to "Se connecter", new_user_session_path%>
+    <% end %>
   </div>
 </div>

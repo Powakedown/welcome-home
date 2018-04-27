@@ -1,5 +1,6 @@
 class MessengerController < ApplicationController
   before_action :message_from_params, only: %i[new_mail]
+  skip_before_action :authenticate_user!, only: %i[new_mail]
 
   def new_mail
     @params = params[:message]
