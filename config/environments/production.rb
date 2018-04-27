@@ -1,5 +1,8 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { host: 'https://welcome-homies.herokuapp.com/' }
+  config.action_mailer.delivery_method     = :postmark
+  config.action_mailer.postmark_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
 
   # Code is not reloaded between requests.
   config.cache_classes = true

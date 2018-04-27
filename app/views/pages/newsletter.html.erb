@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Écrire une newsletter :</h1>
+  <p>(entrer un seul email, c'est du postmark)</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= simple_form_for :message, url: new_mail_path, method: :get do |f| %>
+        <%= f.input :email %>
+        <%= f.input :title %>
+        <%= f.input :message, as: :text, :input_html => { cols: 5,
+                                                          rows: 10,
+                                                          placeholder: "contenu de l'article",
+                                                          resize: "none",
+                                                          } %>
+        <%= f.submit "Poster le nouvel article", class:"btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container">
+  <%= console %>
+  <div class="row">
+    <%= simple_form_for @post do |f| %>
+      <%= f.input :title %>
+      <%= f.input :category, collection: @categories %>
+      <%= f.input :content, as: :text, :input_html => { cols: 5,
+                                                        rows: 10,
+                                                        placeholder: "contenu de l'article",
+                                                        resize: "none",
+                                                        } %>
+      <%= f.submit "Poster le nouvel article", class:"btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
