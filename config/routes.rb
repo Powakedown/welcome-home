@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'messenger/new_mail'
 
   root to: 'pages#home'
